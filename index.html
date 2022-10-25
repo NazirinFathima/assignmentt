@@ -2,14 +2,25 @@
 <html>
 <head>
   <title>Student Form</title>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  
+
 </head>
-<h1>Student Form<h1>
-    <div>
-      <form id="student_form" onsubmit="validateForm(event)">
+<body>
+<div class="container-fluid">
+  <div class="row justify-content-start ">
+      <div class="col-md-12">
+<h1 style="text-align: center;">STUDENT FORM</h1>
+    
+      <form id="form" onsubmit="validateForm(event)">
         <label for="a1">Name</label>
         <input type="text" name="Name" id="a1"><br><br>
         <label for="class">Class</label>
         <select name="" id="class" name="class">
+          <option>select an option</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -28,8 +39,15 @@
         <label for="male">male</label>
         <input type="radio" id="female" name="gender">
         <label for="female">female</label><br><br>
-        <label for="a3">Division</label>
-        <input type="text" name="division" id="a3"><br><br>
+        <label for="division">Division</label>
+        <select name="" id="division" name="a3">
+          <option value="select an option"></option>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+      
+        </select><br><br>
         <label for="">DOB</label>
         <input type="date" name="dob" id=""> <br><br>
         <button type="submit">Submit</button>
@@ -37,11 +55,11 @@
         <script>
           function validateForm(event) {
             event.preventDefault();
-            var fn = document.forms["student_form"]["Name"].value;
-            var ln = document.forms["student_form"]["class"].value;
-            var gn = document.forms["student_form"]["gender"];
-            var dv = document.forms["student_form"]["division"].value;
-            var db = document.forms["student_form"]["dob"].value;
+            var fn = document.forms["form"]["Name"].value;
+            var ln = document.forms["form"]["class"].value;
+            var gn = document.forms["form"]["gender"];
+            var dv = document.forms["form"]["division"].value;
+            var db = document.forms["form"]["dob"].value;
             console.log(fn, ln, gn, dv, db);
             if (fn == null || fn == "") {
               alert("name cannot be blank");
@@ -64,11 +82,21 @@
               return false;
             }
             else {
-              alert("success!!")
+              alert("success!")
             }
           }
         </script>
+        
+      </div>
+  </div>
+</div>
+</form>
         </body>
 </html>
-
-
+        
+      </div>
+  </div>
+</div>
+</form>
+        </body>
+</html>
